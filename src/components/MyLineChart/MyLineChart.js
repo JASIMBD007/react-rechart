@@ -1,57 +1,60 @@
 import React from 'react';
-import { Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const MyLineChart = () => {
     const data = [
         {
             name: 'Supplier A',
             price: 4000,
-            pv: 2400,
-            amt: 2400,
+            sales: 2400,
+            profit: 2400,
         },
         {
             name: 'Supplier B',
             price: 3000,
-            pv: 1398,
-            amt: 2210,
+            sales: 1398,
+            profit: 2210,
         },
         {
             name: 'Supplier C',
             price: 2000,
-            pv: 9800,
-            amt: 2290,
+            sales: 9800,
+            profit: 2290,
         },
         {
             name: 'Supplier D',
             price: 2780,
-            pv: 3908,
-            amt: 2000,
+            sales: 3908,
+            profit: 2000,
         },
         {
             name: 'Supplier E',
             price: 1890,
-            pv: 4800,
-            amt: 2181,
+            sales: 4800,
+            profit: 2181,
         },
         {
             name: 'Supplier F',
             price: 2390,
-            pv: 3800,
-            amt: 2500,
+            sales: 3800,
+            profit: 2500,
         },
         {
             name: 'Supplier G',
             price: 3490,
-            pv: 4300,
-            amt: 2100,
+            sales: 4300,
+            profit: 2100,
         },
     ];
 
     return (
-        <LineChart width={400} height={400} data={data}>
+        <LineChart width={800} height={400} data={data}>
             <Line dataKey={'price'} ></Line>
+            <Line dataKey={'sales'} ></Line>
+            <Line dataKey={'profit'} ></Line>
             <XAxis dataKey={'name'}></XAxis>
             <YAxis></YAxis>
+            <Tooltip></Tooltip>
         </LineChart>
     );
 };
